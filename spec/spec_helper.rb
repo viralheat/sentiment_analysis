@@ -10,3 +10,5 @@ end
 
 Dir[File.join(File.dirname(__FILE__), 'support/**/*.rb')].each {|f| require f}
 
+OPTIONS = YAML::load(File.open(File.join(File.dirname(__FILE__), 'config.yml')))
+API_KEY = OPTIONS['api_key']
