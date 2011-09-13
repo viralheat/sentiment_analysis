@@ -30,15 +30,9 @@ describe ".quota" do
 
   context "with (:format => :xml)" do
     use_vcr_cassette "quota_with_xml_format_parameter", :record => :new_episodes
-    let(:quota) {as.quota(:format => :xml)}
 
     it 'returns the number of remaining API calls in an XML string' do
-      quota.should == <<-XML
-<?xml version=\"1.0\" encoding=\"UTF-8\"?>
-<result>
-  <quota_remaining>4976</quota_remaining>
-</result>
-XML
+      as.quota(:format => :xml).should == xml_fixture('quota_success.xml')
     end
   end
 

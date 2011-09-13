@@ -5,7 +5,7 @@ describe '.review' do
   let(:as) {SentimentAnalysis::Client.new(:api_key => API_KEY)}
 
 
-  context "without parameter" do
+  context "without a format parameter" do
     use_vcr_cassette "review", :record => :new_episodes
 
     before() do
@@ -36,19 +36,9 @@ describe '.review' do
   context "with (:format => :xml)" do
     use_vcr_cassette "review with :xml format parameter", :record => :new_episodes
 
-    before() do
-      @result = as.review(:text => "I don't like coffee", :format => :xml)
-    end
-
     it 'returns the OK status in a XML String' do
-      @result.should == <<-XML
-<?xml version=\"1.0\" encoding=\"UTF-8\"?>
-<result>
-  <text>I don't like coffee</text>
-  <mood>negative</mood>
-  <prob>0.55865964876338</prob>
-</result>
-XML
+      result = as.review(:text => "I don't like coffee", :format => :xml)
+      result.should == xml_fixture('review_success.xml')
     end
   end
 
@@ -60,6 +50,12 @@ XML
     expect{
       as.review(:text => "I don't like coffee", :format => :invalid_format)
     }.to raise_error(SentimentAnalysis::FormatError)
+  end
+
+  example ".review without a :text parameter raises an ArgumentError" do
+    expect{
+      as.review({})
+    }.to raise_error(ArgumentError)
   end
 
 end

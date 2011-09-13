@@ -5,7 +5,7 @@ describe '.train' do
   let(:as) {SentimentAnalysis::Client.new(:api_key => API_KEY)}
 
 
-  context "without parameter" do
+  context "without a format parameter" do
     use_vcr_cassette "train with a negative mood", :record => :new_episodes
 
     before() do
@@ -41,16 +41,12 @@ describe '.train' do
     use_vcr_cassette "train with a negative mood", :record => :new_episodes
 
     before() do
-      @result = as.train(:text => "I don't like coffee'",:mood => 'negative', :format => :xml)
+
     end
 
     it 'returns the number of remaining API calls in an XML string' do
-      @result.should == <<-XML
-<?xml version=\"1.0\" encoding=\"UTF-8\"?>
-<result>
-  <status>ok</status>
-</result>
-XML
+      result = as.train(:text => "I don't like coffee'",:mood => 'negative', :format => :xml)
+      result.should == xml_fixture('train_success.xml')
     end
 
 
@@ -61,6 +57,18 @@ XML
       expect{
         as.train(:text => "I don't like coffee'",:mood => 'negative', :format => :invalid_format)
       }.to raise_error(SentimentAnalysis::FormatError)
+    end
+
+    example ".train without a :text parameter raises an ArgumentError" do
+      expect{
+        as.train(:mood => 'negative')
+      }.to raise_error(ArgumentError)
+    end
+
+    example ".train without a :text parameter raises an ArgumentError" do
+      expect{
+        as.train(:text => "I don't like coffee'")
+      }.to raise_error(ArgumentError)
     end
 
   end

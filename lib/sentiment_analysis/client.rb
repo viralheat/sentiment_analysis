@@ -25,6 +25,8 @@ module SentimentAnalysis
 
 
     def train(options)
+      raise ArgumentError.new(":text parameter is missing") unless options[:text]
+      raise ArgumentError.new(":mood parameter is missing") unless options[:mood]
       query = {:api_key => @api_key, :text => options[:text], :mood => options[:mood] }
 
       case options[:format]
@@ -37,6 +39,7 @@ module SentimentAnalysis
 
 
     def review(options)
+      raise ArgumentError.new(":text parameter is missing") unless options[:text]
       query = {:api_key => @api_key, :text => options[:text]}
 
       case options[:format]
