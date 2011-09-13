@@ -11,7 +11,16 @@ module SentimentAnalysis
     end
 
     def quota
-      self.class.get('/quota.json', :query => {:api_key => @api_key}).to_hash
+      self.class.get('/quota.json', :query => {:api_key => @api_key})
     end
+
+    def train(options)
+      self.class.get('/train.json', :query => {:api_key => @api_key, :text => options[:text], :mood => options[:mood] })
+    end
+
+    def review(options)
+      self.class.get('/review.json', :query => {:api_key => @api_key, :text => options[:text]})
+    end
+
   end
 end
