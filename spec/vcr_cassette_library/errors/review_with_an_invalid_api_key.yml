@@ -1,0 +1,96 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://viralheat.com:80/api/sentiment/review.json?api_key=AN-invalid-API-key&text=I%20don't%20like%20coffee
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 302
+      message: Found
+    headers:
+      server:
+      - nginx/0.7.62
+      date:
+      - Tue, 13 Sep 2011 11:38:50 GMT
+      content-type:
+      - text/html; charset=utf-8
+      transfer-encoding:
+      - chunked
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      cache-control:
+      - no-cache
+      location:
+      - http://viralheat.com/api/error/over_quota
+      status:
+      - '302'
+      vary:
+      - Accept-Encoding
+    body: <html><body>You are being <a href="http://viralheat.com/api/error/over_quota">redirected</a>.</body></html>
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://viralheat.com:80/api/error/over_quota
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 302
+      message: Found
+    headers:
+      server:
+      - nginx/0.7.62
+      date:
+      - Tue, 13 Sep 2011 11:38:51 GMT
+      content-type:
+      - text/html; charset=utf-8
+      transfer-encoding:
+      - chunked
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      cache-control:
+      - no-cache
+      location:
+      - http://viralheat.com/api/error/over_quota.xml
+      status:
+      - '302'
+      vary:
+      - Accept-Encoding
+    body: <html><body>You are being <a href="http://viralheat.com/api/error/over_quota.xml">redirected</a>.</body></html>
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://viralheat.com:80/api/error/over_quota.xml
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/0.7.62
+      date:
+      - Tue, 13 Sep 2011 11:38:51 GMT
+      content-type:
+      - application/xml; charset=utf-8
+      transfer-encoding:
+      - chunked
+      etag:
+      - ! '"209b2aaad1c49df22c2ba0e9a9b5bbd9"'
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      cache-control:
+      - max-age=0, private, must-revalidate
+      status:
+      - '200'
+    body: ! '<?xml version="1.0" encoding="UTF-8"?>
+
+      <error>Error: Over quota limit. Please try again in 24 hours.</error>
+
+'
+    http_version: '1.1'
