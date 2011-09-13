@@ -1,0 +1,9 @@
+
+API_KEY :
+=========
+    To run the test, you need to a personal api key (see http://viralheat.com/developer
+
+    Once you have an api_key
+        $ cd <project_root>
+        $ cp spec/config.yml.example spec/config.yml
+        $ (edit config.yml and add your api_key)
