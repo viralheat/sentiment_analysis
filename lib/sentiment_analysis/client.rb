@@ -10,24 +10,41 @@ module SentimentAnalysis
       @api_key = options[:api_key]
     end
 
+
     def quota(options={})
-      format = options[:format]
-      case format
-        when nil
-          self.class.get('/quota.json', :query => {:api_key => @api_key})['quota_remaining']
-        when :json
-          self.class.get('/quota.json', :query => {:api_key => @api_key})
-        when :xml
-          self.class.get('/quota.xml', :query => {:api_key => @api_key}).body
+      query = {:api_key => @api_key}
+
+      case options[:format]
+        when nil      then self.class.get('/quota.json', :query => query)['quota_remaining']
+        when :json    then self.class.get('/quota.json', :query => query)
+        when :xml     then self.class.get('/quota.xml',  :query => query).body
+        else
+          raise SentimentAnalysis::FormatError.new("Invalid format : #{options[:format]}")
       end
     end
 
+
     def train(options)
-      self.class.get('/train.json', :query => {:api_key => @api_key, :text => options[:text], :mood => options[:mood] })
+      query = {:api_key => @api_key, :text => options[:text], :mood => options[:mood] }
+
+      case options[:format]
+        when nil, :json then self.class.get('/train.json', :query => query)
+        when :xml       then self.class.get('/train.xml',  :query => query).body
+        else
+          raise SentimentAnalysis::FormatError.new("Invalid format : #{options[:format]}")
+      end
     end
 
+
     def review(options)
-      self.class.get('/review.json', :query => {:api_key => @api_key, :text => options[:text]})
+      query = {:api_key => @api_key, :text => options[:text]}
+
+      case options[:format]
+        when nil, :json then self.class.get('/review.json', :query => query)
+        when :xml       then self.class.get('/review.xml',  :query => query).body
+        else
+          raise SentimentAnalysis::FormatError.new("Invalid format : #{options[:format]}")
+      end
     end
 
   end

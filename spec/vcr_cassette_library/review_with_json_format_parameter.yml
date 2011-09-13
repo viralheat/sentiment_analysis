@@ -1,0 +1,30 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://viralheat.com:80/api/sentiment/review.json?api_key=aJMm2A4wTh1esjSkETGq&text=I%20don't%20like%20coffee
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/0.7.62
+      date:
+      - Tue, 13 Sep 2011 12:20:34 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      etag:
+      - ! '"2e87cef6d63d1b03a760cfddc986e0e0"'
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      cache-control:
+      - max-age=0, private, must-revalidate
+      status:
+      - '200'
+    body: ! '{"mood":"negative","prob":0.55865964876338,"text":"I don''t like coffee"}'
+    http_version: '1.1'
