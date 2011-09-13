@@ -7,3 +7,12 @@ API_KEY :
         $ cd <project_root>
         $ cp spec/config.yml.example spec/config.yml
         $ (edit config.yml and add your api_key)
+
+
+How to test
+===========
+
+    $ cd <project_root>
+    $ bundle
+    $ rake
+
