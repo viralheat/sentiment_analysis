@@ -1,0 +1,30 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://viralheat.com:80/api/sentiment/quota.xml?api_key=aJMm2A4wTh1esjSkETGq
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/0.7.62
+      date:
+      - Tue, 13 Sep 2011 11:52:43 GMT
+      content-type:
+      - application/xml; charset=utf-8
+      transfer-encoding:
+      - chunked
+      etag:
+      - ! '"ac88f5e43483b580e736eb8aff92933a"'
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      cache-control:
+      - max-age=0, private, must-revalidate
+      status:
+      - '200'
+    body: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<result>\n  <quota_remaining>4976</quota_remaining>\n</result>\n"
+    http_version: '1.1'
