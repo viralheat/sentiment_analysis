@@ -1,3 +1,11 @@
+How to install the gem from the source code
+===========
+
+    $ git clone git://github.com/viralheat/sentiment_analysis.git
+    $ cd sentiment_analysis
+    $ bundle
+    $ rake install
+
 
 API_KEY :
 =========
@@ -7,6 +15,7 @@ API_KEY :
         $ cd <project_root>
         $ cp spec/config.yml.example spec/config.yml
         $ (edit config.yml and add your api_key)
+
 
 
 How to test
