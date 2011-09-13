@@ -4,10 +4,20 @@ describe SentimentAnalysis::Client do
 
   let(:as) {SentimentAnalysis::Client.new(:api_key => API_KEY)}
 
+#--------
+# quota
+#--------
+
   describe ".quota" do
-    it 'returns the remaining API calls quota in a Hash' do
-      as.quota.class.should ==  Hash
-      as.quota.should ==  {"quota_remaining"=>4999}
+
+    let(:quota) {as.quota}
+
+    use_vcr_cassette "quota_without_parameter", :record => :new_episodes
+
+    it('returns a Hash') { quota.should be_a Hash }
+
+    it 'returns the number of remaining API calls' do
+      quota.should ==  {"quota_remaining"=>1234}
     end
   end
 
