@@ -7,6 +7,10 @@ see : [http://viralheat.com/developer/sentiment_api](http://viralheat.com/develo
 
 gem install sentiment_analysis
 
+## <a name="installation">Getting an API Key</a>
+
+You can get an API key by visiting http://www.viralheat.com/developer. Sign up as a FREE developer and get a key for use with this gem. The developer dashboard will also show you details on your quota.
+
 ## <a name="how to use">How to use</a>
 
 
