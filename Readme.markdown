@@ -1,5 +1,5 @@
-# The SentimentAnalysis Ruby gem
-A Ruby wrapper for the SentimentAnalysis API
+# The Sentiment Analysis Ruby Gem
+A Ruby wrapper for the Viralheat Sentiment Analysis API
 
 see : [http://viralheat.com/developer/sentiment_api](http://viralheat.com/developer/sentiment_api)
 
