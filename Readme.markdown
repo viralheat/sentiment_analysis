@@ -57,3 +57,9 @@ Choose the format - :xml
 		     <status>ok</status>
 		   </result>
 	
+
+Error : Invalid API key
+
+	sa = SentimentAnalysis::Client.new(:api_key => 'AN-INVALID-KEY')
+	puts sa.quota
+	  # => raises a SentimentAnalysis::InvalidApiKeyError

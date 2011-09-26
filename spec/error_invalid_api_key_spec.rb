@@ -12,11 +12,7 @@ context 'when the API key is invalid' do
 
   example 'calling quota() raises as InvalidApiKeyError ' do
     VCR.use_cassette "errors/quota with an invalid api key", :record => :new_episodes  do
-      pending "update the API service to return a 401 when the API is invalid" do
-        expect{
-          as.quota
-        }.to raise_error(SentimentAnalysis::InvalidApiKeyError)
-      end
+      expect{ as.quota                    }.to raise_error(SentimentAnalysis::InvalidApiKeyError)
     end
   end
 
@@ -27,11 +23,9 @@ context 'when the API key is invalid' do
 
   example 'calling train() raises as InvalidApiKeyError ' do
     VCR.use_cassette "errors/train with an invalid api key", :record => :new_episodes  do
-      pending "update the API service to return a 401 when the API is invalid" do
-        expect{
-          as.train(:text => "I don't like coffee'",:mood => 'negative')
-        }.to raise_error(SentimentAnalysis::InvalidApiKeyError)
-      end
+      expect{
+        as.train(:text => "I don't like coffee'",:mood => 'negative', :format => :json)
+      }.to raise_error(SentimentAnalysis::InvalidApiKeyError)
     end
   end
 
@@ -42,11 +36,9 @@ context 'when the API key is invalid' do
 
   example 'calling review() raises as InvalidApiKeyError ' do
     VCR.use_cassette "errors/review with an invalid api key", :record => :new_episodes  do
-      pending "update the API service to return a 401 when the API is invalid" do
-        expect{
-          as.review(:text => "I don't like coffee")
-        }.to raise_error(SentimentAnalysis::InvalidApiKeyError)
-      end
+      expect{
+        as.review(:text => "I don't like coffee", :format => :xml)
+      }.to raise_error(SentimentAnalysis::InvalidApiKeyError)
     end
   end
 

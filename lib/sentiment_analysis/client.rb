@@ -47,12 +47,20 @@ module SentimentAnalysis
         response
     end
 
+
   private
 
+
+    # call the Sentiment-Analysis API server
+    #
+    # it raises SentimentAnalysis::InvalidApiKeyError if the server returns a 401/the API key is invalid
+    # it raises SentimentAnalysis::FormatError        if the :format option is not nil|:xml|:json
     def get_response_for(action, params)
       url   = url_for(action, params[:options])
       query = params[:query]
-      self.class.get(url, :query => query)
+      r = self.class.get(url, :query => query)
+      raise SentimentAnalysis::InvalidApiKeyError if r.response.code == '401'
+      r
     end
 
     def url_for(base, options)
