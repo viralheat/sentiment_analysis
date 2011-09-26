@@ -7,24 +7,22 @@
     headers: !!null 
   response: !ruby/struct:VCR::Response
     status: !ruby/struct:VCR::ResponseStatus
-      code: 200
-      message: OK
+      code: 401
+      message: Authorization Required
     headers:
       server:
       - nginx/0.7.62
       date:
-      - Tue, 13 Sep 2011 11:38:49 GMT
+      - Mon, 26 Sep 2011 16:25:44 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
       - chunked
-      etag:
-      - ! '"043341334b56f8bf1f2cdd30a73843ea"'
       x-ua-compatible:
       - IE=Edge,chrome=1
       cache-control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       status:
-      - '200'
-    body: ! '{"quota_remaining":0}'
+      - '401'
+    body: ! '{"error":"Error: Invalid API key."}'
     http_version: '1.1'
