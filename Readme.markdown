@@ -5,7 +5,7 @@ see : [http://viralheat.com/developer/sentiment_api](http://viralheat.com/develo
 
 ## <a name="installation">Installation</a>
 
-gem install sentiment_analysis
+```gem install sentiment_analysis```
 
 ## <a name="installation">Getting an API Key</a>
 
@@ -22,10 +22,10 @@ Simple way
 	puts sa.quota
 	  # => 5000
 
-	puts as.review("i don't like this")
+	puts sa.review(:text => "i don't like this")
 	  # => {"prob":0.732603741199471,"mood":"negative","text":"i don't like this"}
 
-	puts as.train(:text => "I don't like coffee'",:mood => 'negative')
+	puts sa.train(:text => "I don't like coffee'",:mood => 'negative')
       # => {"status":"ok"}
 	
 
