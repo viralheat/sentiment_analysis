@@ -6,7 +6,6 @@ How to install the gem from the source code
     $ bundle
     $ rake install
 
-
 API_KEY :
 =========
     To run the test, you need to a personal api key (see http://viralheat.com/developer
@@ -16,12 +15,9 @@ API_KEY :
         $ cp spec/config.yml.example spec/config.yml
         $ (edit config.yml and add your api_key)
 
-
-
 How to test
 ===========
 
     $ cd <project_root>
     $ bundle
     $ rake
-

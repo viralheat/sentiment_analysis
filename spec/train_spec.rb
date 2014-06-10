@@ -15,8 +15,8 @@ describe '.train' do
     it('fetches JSON data') { @result.response.content_type.should == 'application/json' }
 
     it 'returns the OK status in a Hash-like object' do
-      @result.should ==  {"status"=> 'ok'}
-      @result['status'].should ==  'ok'
+      @result.should == {"status"=>200, "error"=>nil}
+      @result['status'].should == 200 
     end
   end
 
@@ -31,8 +31,8 @@ describe '.train' do
     it('fetches JSON data') { @result.response.content_type.should == 'application/json' }
 
     it 'returns the OK status in a Hash-like object' do
-      @result.should ==  {"status"=> 'ok'}
-      @result['status'].should ==  'ok'
+      @result.should ==  {"status"=>200, "error"=>nil}
+      @result['status'].should ==  200
     end
   end
 
@@ -43,12 +43,6 @@ describe '.train' do
     before() do
 
     end
-
-    it 'returns the number of remaining API calls in an XML string' do
-      result = as.train(:text => "I don't like coffee'",:mood => 'negative', :format => :xml)
-      result.should == xml_fixture('train_success.xml')
-    end
-
 
 # Error handling
 #----------------

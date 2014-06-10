@@ -1,9 +1,7 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 describe '.review' do
-
   let(:as) {SentimentAnalysis::Client.new(:api_key => API_KEY)}
-
 
   context "without a format parameter" do
     use_vcr_cassette "review", :record => :new_episodes
@@ -13,8 +11,8 @@ describe '.review' do
     end
 
     it 'returns the OK status in a Hash-like object' do
-      @result.should ==  {"prob"=>0.55865964876338, "mood"=>"negative", "text"=>"I don't like coffee"}
-      @result['prob'].should ==  0.55865964876338
+      @result.should == {"status"=>200, "error"=>nil, "text"=>"\"I don't like coffee\"", "mood"=>"'positive'", "prob"=>"0.71508301251148787"}
+      @result['prob'].should ==  "0.71508301251148787"
     end
   end
 
@@ -27,21 +25,10 @@ describe '.review' do
     end
 
     it 'returns the OK status in a Hash-like object' do
-      @result.should ==  {"prob"=>0.55865964876338, "mood"=>"negative", "text"=>"I don't like coffee"}
-      @result['prob'].should ==  0.55865964876338
+      @result.should == {"status"=>200, "error"=>nil, "text"=>"\"I don't like coffee\"", "mood"=>"'positive'", "prob"=>"0.71508301251148787"}
+      @result['prob'].should ==  "0.71508301251148787"
     end
   end
-
-
-  context "with (:format => :xml)" do
-    use_vcr_cassette "review with :xml format parameter", :record => :new_episodes
-
-    it 'returns the OK status in a XML String' do
-      result = as.review(:text => "I don't like coffee", :format => :xml)
-      result.should == xml_fixture('review_success.xml')
-    end
-  end
-
 
 # Error handling
 #----------------

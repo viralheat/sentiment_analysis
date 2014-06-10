@@ -2,58 +2,35 @@
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :get
-    uri: http://viralheat.com:80/api/sentiment/train.json?api_key=aJMm2A4wTh1esjSkETGq&text=I%20don't%20like%20coffee'&mood=negative
-    body: !!null 
-    headers: !!null 
+    uri: https://app.viralheat.com:443/social/api/sentiment/train?api_key=<API_KEY>&text=I%20don't%20like%20coffee'&mood=negative
+    body: 
+    headers: 
   response: !ruby/struct:VCR::Response
     status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
     headers:
       server:
-      - nginx/0.7.62
+      - nginx/1.4.4
       date:
-      - Tue, 13 Sep 2011 09:25:14 GMT
+      - Tue, 10 Jun 2014 21:57:28 GMT
       content-type:
       - application/json; charset=utf-8
-      transfer-encoding:
-      - chunked
-      etag:
-      - ! '"0f0479874bf6f4a7281099b15df27c27"'
+      content-length:
+      - '27'
+      strict-transport-security:
+      - max-age=31536000
       x-ua-compatible:
       - IE=Edge,chrome=1
-      cache-control:
-      - max-age=0, private, must-revalidate
-      status:
-      - '200'
-    body: ! '{"status":"ok"}'
-    http_version: '1.1'
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :get
-    uri: http://viralheat.com:80/api/sentiment/train.xml?api_key=aJMm2A4wTh1esjSkETGq&text=I%20don't%20like%20coffee'&mood=negative
-    body: !!null 
-    headers: !!null 
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
-      code: 200
-      message: OK
-    headers:
-      server:
-      - nginx/0.7.62
-      date:
-      - Tue, 13 Sep 2011 12:14:07 GMT
-      content-type:
-      - application/xml; charset=utf-8
-      transfer-encoding:
-      - chunked
       etag:
-      - ! '"38ab7795ed364c12f37d99bbf1861d6b"'
-      x-ua-compatible:
-      - IE=Edge,chrome=1
+      - ! '"27295311aefc7e77f813327449386332"'
       cache-control:
       - max-age=0, private, must-revalidate
+      x-request-id:
+      - 088e0e0eb978690694185d4045533b01
+      x-rack-cache:
+      - miss
       status:
       - '200'
-    body: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<result>\n  <status>ok</status>\n</result>\n"
+    body: ! '{"status":200,"error":null}'
     http_version: '1.1'

@@ -2,29 +2,473 @@
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :get
-    uri: http://viralheat.com:80/api/sentiment/quota.json?api_key=AN-invalid-API-key
-    body: !!null 
-    headers: !!null 
+    uri: https://app.viralheat.com:443/social/api/sentiment/quota.json?api_key=AN-invalid-API-key
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 302
+      message: Found
+    headers:
+      server:
+      - nginx/1.4.4
+      date:
+      - Tue, 10 Jun 2014 21:55:03 GMT
+      content-type:
+      - text/html; charset=utf-8
+      content-length:
+      - '100'
+      strict-transport-security:
+      - max-age=31536000
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      cache-control:
+      - no-cache
+      x-request-id:
+      - 63f0d456ce23a7560136901cbe12b33d
+      x-rack-cache:
+      - miss
+      location:
+      - https://app.viralheat.com/browsers
+      status:
+      - '302'
+      vary:
+      - Accept-Encoding
+    body: <html><body>You are being <a href="https://app.viralheat.com/browsers">redirected</a>.</body></html>
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://app.viralheat.com:443/browsers
+    body: 
+    headers: 
   response: !ruby/struct:VCR::Response
     status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
     headers:
       server:
-      - nginx/0.7.62
+      - nginx/1.4.4
       date:
-      - Tue, 13 Sep 2011 11:38:49 GMT
+      - Tue, 10 Jun 2014 21:55:04 GMT
       content-type:
-      - application/json; charset=utf-8
-      transfer-encoding:
-      - chunked
-      etag:
-      - ! '"043341334b56f8bf1f2cdd30a73843ea"'
+      - text/html; charset=utf-8
+      content-length:
+      - '42670'
+      strict-transport-security:
+      - max-age=31536000
       x-ua-compatible:
       - IE=Edge,chrome=1
+      etag:
+      - ! '"c7d48a97506f9ecbf953375c2b3b181c"'
       cache-control:
       - max-age=0, private, must-revalidate
+      x-request-id:
+      - 7230964c4a2fb40038c9a1475a4d9f7c
+      x-rack-cache:
+      - miss
+      set-cookie:
+      - _viralheat_user_session_03052014=04b6cc6a9bf8c8d1e69ab8d4c8617017; domain=.viralheat.com;
+        path=/; secure; HttpOnly
       status:
       - '200'
-    body: ! '{"quota_remaining":0}'
+      vary:
+      - Accept-Encoding
+    body: ! "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><html
+      xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><head><meta
+      http-equiv=\"content-type\" content=\"text/html;charset=UTF-8\" /><meta http-equiv=\"Content-language\"
+      content=\"en\" /><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" /><meta
+      name=\"robots\" content=\"noodp,noydir\" /><meta name=\"description\" content=\"Viralheat
+      is a social media analytics and intelligence platform that delivers real-time
+      data on over several different video, microblogging platforms and millions of
+      websites. Our goal is to make data simple and understandable to empower consumers
+      and professionals to navigate the complex world of social media.\" /><meta name=\"keywords\"
+      content=\"&#39;online, viral, video, social, media, metrics, youtube, facebook,
+      twitter, alerts, viralheat, viral video chart, PR, brands, television shows,
+      TV shows, music, movies, internet, blogs, websites, low, price, intelligence\"
+      /><meta content=\"authenticity_token\" name=\"csrf-param\" />\n<meta content=\"6jR6/21cxYQPa9nxtBh3xJqYkgwbDw2rCN2hQEUGkJw=\"
+      name=\"csrf-token\" /><link rel=\"shortcut icon\" href=\"/favicon.ico\" /><title>Viralheat
+      | Social Media Simplified</title><script type=\"text/placeholder\" data-behavior=\"dynamic-yielder\"
+      data-placeholder-name=\"meta\"></script><!--le stylesheets--><link href=\"/assets/layouts/browsers-2249c7d1eec7a7c3a598e7cb92e2981b.css\"
+      media=\"screen\" rel=\"stylesheet\" type=\"text/css\" /><link href=\"/assets/controllers/static-535d9151d5e4c6eb1dcbe87972595986.css\"
+      media=\"screen\" rel=\"stylesheet\" type=\"text/css\" /><!--[if IE]><link href=\"/stylesheets/shared/ie.css\"
+      media=\"screen\" rel=\"stylesheet\" type=\"text/css\" /><![endif]--><script
+      type=\"text/javascript\">var NREUMQ=NREUMQ||[];NREUMQ.push([\"mark\",\"firstbyte\",new
+      Date().getTime()]);</script></head><body id=\"\"><div class=\"page-wrapper static
+      static_browsers\"><header class=\"navbar navbar-fixed-top\"><div class=\"navbar-inner\"><div
+      class=\"container\"><div class=\"logo\"><a href=\"https://app.viralheat.com/\"
+      class=\"brand\">Viralheat</a></div></div></div></header><div class=\"container\"><h1>Get
+      a better online experience</h1><p>You're using a web browser we don't support.<br
+      /> Try one of these options to have a better experience on Viralheat.</p><ul><li
+      class=\"chrome\"><a href=\"https://www.google.com/intl/en/chrome/browser/\">Chrome
+      29+</a></li><li class=\"firefox\"><a href=\"https://www.mozilla.org/en-US/firefox/new/\">Firefox
+      28+</a></li><li class=\"safari\"><a href=\"https://www.apple.com/safari/\">Safari
+      6.1+</a></li><li class=\"ie\"><a href=\"http://windows.microsoft.com/en-US/internet-explorer/products/ie/home\">Internet
+      Explorer 9+</a></li></ul></div></div><div id=\"js-setup\"><script src=\"/assets/application-b57e5db5c1a61a36976b7901afcdffbd.js\"
+      type=\"text/javascript\"></script><script type=\"text/javascript\">Viralheat.app.on(\"initialize\",
+      function(){\n  Viralheat.app = _.extend({}, Viralheat.app, {\"params\":{\"auth_token\":null,\"organization\":null,\"enterprise\":null,\"controller\":\"static\",\"action\":\"browsers\",\"logged\":false,\"sublayout\":null,\"flash\":{},\"mode\":\"production\",\"browser_env\":null,\"ssl\":true,\"is_ie\":false,\"publishing\":{\"allowed\":[]},\"publishing_version\":1,\"time_zone\":{\"exists\":false},\"time_zone_value\":null,\"cache_version\":193,\"cache_fingerprint\":\"ca149f1315761bc30b4737d1354d358b\",\"stream_server_type\":\"legacy\",\"dm_server_type\":\"legacy\",\"socket_uri\":\"api.viralheat.com/websocket\"},\"platform_configurations\":{\"facebook\":{},\"twitter\":{},\"google_plus\":{},\"linkedin\":{}},\"urls\":{\"administration.activated_users_search\":\"https://app.viralheat.com/administration/users/search\",\"administration.package_search\":\"https://app.viralheat.com/administration/packages/search\",\"analytics.index\":\"https://app.viralheat.com/analytics\",\"analytics.show\":\"https://app.viralheat.com/analytics/:id/:group\",\"notifications.page\":\"https://app.viralheat.com/notifications\",\"notifications.count\":\"https://app.viralheat.com/notifications/count\",\"notification_rules.mute\":\"https://app.viralheat.com/notification_rules/:id/mute\",\"notification_rules.unmute\":\"https://app.viralheat.com/notification_rules/:id/unmute\",\"notification_rules.sources\":\"https://app.viralheat.com/notification_rules/sources\",\"notification_rules.trigger_conditions\":\"https://app.viralheat.com/notification_rules/trigger_conditions\",\"notification_rules.recipients\":\"https://app.viralheat.com/notification_rules/recipients\",\"organizations\":\"https://app.viralheat.com/organizations\",\"organizations.new\":\"https://app.viralheat.com/organizations/new\",\"organization.accounts_group_create\":\"https://app.viralheat.com/organizations/:organization_id/accounts_groups\",\"organization.accounts_group_edit\":\"https://app.viralheat.com/organizations/:organization_id/accounts_groups/:id\",\"organization.accounts_groups_names_list\":\"https://app.viralheat.com/organizations/:organization_id/accounts_groups/names_list\",\"organization.notification_rules.mute\":\"https://app.viralheat.com/organizations/:organization_id/notification_rules/:id/mute\",\"organization.notification_rules.unmute\":\"https://app.viralheat.com/organizations/:organization_id/notification_rules/:id/unmute\",\"organization.notification_rules.sources\":\"https://app.viralheat.com/organizations/:organization_id/notification_rules/sources\",\"organization.notification_rules.trigger_conditions\":\"https://app.viralheat.com/organizations/:organization_id/notification_rules/trigger_conditions\",\"organization.notification_rules.recipients\":\"https://app.viralheat.com/organizations/:organization_id/notification_rules/recipients\",\"org_management.fetch_roles\":\"https://app.viralheat.com/org_management/roles/:id/list\",\"stream.page\":\"https://app.viralheat.com/stream\",\"stream.list\":\"https://app.viralheat.com/stream/list\",\"stream_configuration.update\":\"https://app.viralheat.com/stream/:id/update\",\"live_search.create\":\"https://app.viralheat.com/explore/:id/create\",\"live_search.update\":\"https://app.viralheat.com/explore/:id/update\",\"media_services.image\":\"https://app.viralheat.com/process-image?blur=:blur&operation=:operation&size=:size&url=:url\",\"sources\":\"https://app.viralheat.com/sources\",\"sources.add\":\"https://app.viralheat.com/sources/add\",\"sources.tracking\":\"https://app.viralheat.com/sources/:id/tracking/:operation\",\"sources.connect.twitter\":\"https://app.viralheat.com/sources/create/twitter\",\"sources.connect.facebook\":\"https://app.viralheat.com/sources/create/facebook\",\"sources.connect.linkedin\":\"https://app.viralheat.com/sources/create/linkedin\",\"sources.connect.tumblr\":\"https://app.viralheat.com/sources/create/tumblr\",\"sources.connect.foursquare\":\"https://app.viralheat.com/sources/create/foursquare\",\"sources.connect.google_plus\":\"https://app.viralheat.com/sources/create/google_plus\",\"sources.connect.instagram\":\"https://app.viralheat.com/sources/create/instagram\",\"sources.connect.google_analytics\":\"https://app.viralheat.com/sources/create/google_analytics\",\"sources.connect.wordpress\":\"https://app.viralheat.com/sources/create/wordpress\",\"social_activities.like\":\"https://app.viralheat.com/activities/:provider/:asset_id/like/:message_id\",\"social_activities.unlike\":\"https://app.viralheat.com/activities/:provider/:asset_id/unlike/:message_id\",\"social_activities.remove\":\"https://app.viralheat.com/activities/:provider/:asset_id/remove/:message_id\",\"social_activities.twitter_retweet\":\"https://app.viralheat.com/activities/twitter/:asset_id/retweet/:message_id\",\"social_activities.twitter_favorites\":\"https://app.viralheat.com/activities/twitter/:asset_id/favorites/:message_id/:operation\",\"social_activities.twitter_followers\":\"https://app.viralheat.com/activities/twitter/:asset_id/followers/:user_id/:operation\",\"social_activities.twitter_favorite\":\"https://app.viralheat.com/activities/twitter/:asset_id/favorites/:message_id/favorite\",\"social_activities.twitter_unfollow\":\"https://app.viralheat.com/activities/twitter/:asset_id/followers/:user_id/unfollow\",\"social_activities.tumblr_reblog\":\"https://app.viralheat.com/activities/tumblr/:asset_id/reblog/:message_id\",\"social_activities.train.sentiment\":\"https://app.viralheat.com/activities/train/sentiment\",\"social_activities.train.leads\":\"https://app.viralheat.com/activities/train/leads\",\"social_activities.publish\":\"https://app.viralheat.com/social_activities/publish\",\"social_activities.accounts\":\"https://app.viralheat.com/social_activities/accounts\",\"social_activities.preview\":\"https://app.viralheat.com/social_activities/preview\",\"social_activities.templates\":\"https://app.viralheat.com/social_activities/templates\",\"social_activities.upload_image\":\"https://app.viralheat.com/social_activities/upload_image\",\"social_activities.attach_image\":\"https://app.viralheat.com/social_activities/attach_image\",\"social_activities.list_comments\":\"https://app.viralheat.com/activities/:provider/:asset_id/mentions/:message_id/comments\",\"social_activities.remove_comment\":\"https://app.viralheat.com/activities/:provider/:asset_id/comments/:message_id/remove\",\"social_activities.accounts_only\":\"https://app.viralheat.com/social_activities/accounts?exclude_groups=yes\",\"social_activities.delete_group\":\"https://app.viralheat.com/organizations/:organization_id/accounts_groups/:id\",\"social_activities.email\":\"https://app.viralheat.com/activities/email\",\"social_activities.bulk_upload\":\"https://app.viralheat.com/social_activities/bulk_upload\",\"user.set_default_timezone\":\"https://app.viralheat.com/user/set_default_timezone_option\",\"user.save_basic_info\":\"https://app.viralheat.com/user/save_basic_info\",\"urls.shortener\":\"https://app.viralheat.com/links/shorten\",\"urls.expander\":\"https://app.viralheat.com/links/expand\",\"direct_messages.page\":\"https://app.viralheat.com/messages/private/:platform?account=:account\",\"twitter.conversation_history\":\"https://app.viralheat.com/conversations/:platform/:asset_id/:handle\",\"live_search.page\":\"https://app.viralheat.com/explore\",\"live_search.list\":\"https://app.viralheat.com/explore/list\",\"messages.show\":\"https://app.viralheat.com/messages/show/:id\",\"messages.delete\":\"https://app.viralheat.com/messages/delete/:id\",\"reports.recipients\":\"https://app.viralheat.com/reports/recipients\",\"user.sso_toggle\":\"https://app.viralheat.com/user/social_signon/:id/:operation\",\"validation.username\":\"https://app.viralheat.com/user/validate_username\",\"validation.email\":\"https://app.viralheat.com/user/validate_email\",\"stream.images.loader\":\"/images/horizontal-scroll.gif\",\"loaders.small\":\"/images/horizontal-scroll.gif\",\"zendesk.twitter_handles\":\"https://app.viralheat.com/tickets/twitter_accounts\",\"zendesk.groups\":\"https://app.viralheat.com/tickets/groups?platform=zendesk\",\"desk.groups\":\"https://app.viralheat.com/tickets/groups?platform=desk\",\"desk.customers\":\"https://app.viralheat.com/tickets/customers?platform=desk\"},\"keychains\":{\"bitly\":{\"login\":\"viralheat\",\"key\":\"R_c6f2130f582ae856c1d2e1eaf79326ee\"}},\"integrations\":{\"facebook_key\":\"110993348939217\",\"linkedin_key\":\"wljjls15yjlv\",\"google_analytics\":{\"url\":\"https://ssl.google-analytics.com/ga.js\",\"data\":[[\"_setAccount\",\"UA-82877-4\"],[\"_setDomainName\",\"viralheat.com\"],[\"_trackPageview\"]]},\"marketo_key\":\"706-PZI-689\"}});\n});</script><script
+      src=\"/assets/controllers/static-d0fc0ff872f830118d9ff9d9b4a1948f.js\" type=\"text/javascript\"></script></div><div
+      id=\"ui-setup\"><div data-behavior=\"modal-publish\" id=\"publishModal\" class=\"publishing
+      modal hide\"></div><div data-behavior=\"modal-actions\" id=\"actionsModal\"
+      class=\"modal action hide fade\"></div><div data-behavior=\"modal-email\" id=\"emailModal\"
+      class=\"modal email hide fade\"></div><div data-behavior=\"modal-tracking\"
+      class=\"modal tracking hide\"></div><div data-behavior=\"messages-accounts-list\"
+      id=\"messagesAccountsList\" class=\"messages-accounts-list modal hide fixed\"></div><div
+      id=\"reportEmailModal\" class=\"modal hide fade\"></div><div data-behavior=\"dialog-modal\"
+      class=\"modal dialog fade fixed hide\"><div class=\"modal-header\"><a class=\"close\"
+      href=\"#\" data-dismiss=\"modal\"><i class=\"icon-remove\"></i></a><h3 data-behavior=\"confirm-title-container\"></h3></div><div
+      class=\"modal-body\"><div data-behavior=\"confirm-body-container\"></div></div><div
+      class=\"modal-footer\"><div data-behavior=\"confirm-actions-container\"></div></div></div><div
+      data-behavior=\"remote-modal\" class=\"modal remote fade fixed hide\"><div class=\"modal-header\"><a
+      class=\"close\" href=\"#\" data-dismiss=\"modal\"><i class=\"icon-remove\"></i></a><h3
+      data-behavior=\"title\">Remote modal</h3></div><div class=\"modal-body\"><img
+      alt=\"{{label}}\" class=\"loader\" data-behavior=\"loader\" src=\"/images/horizontal-scroll.gif\"
+      /><div data-behavior=\"content\" class=\"content\"></div></div></div><div data-behavior=\"feature-access-blocked\"
+      class=\"feature-blocker modal hide fixed\"><div class=\"modal-header\"><div
+      class=\"row-fluid\"><div class=\"span10\"><i class=\"header-icon\"></i><h3>You
+      are just seconds away...</h3></div></div></div><div data-behavior=\"feature-access-upgrade-body\"
+      class=\"modal-body\"><p data-behavior=\"feature-access-message\">Sorry you do
+      not have access. Please upgrade your plan or <a href='mailto:info@viralheat.com'>contact
+      us</a> to add more accounts.\"</p><p data-behavior=\"feature-access-secondary-message\"
+      class=\"feature-access-secondary-message\"></p></div><div class=\"modal-footer\"><a
+      data-behavior=\"feature-access-hide-modal\" class=\"btn btn-large blue\" href=\"#\">No
+      thanks!</a><a data-behavior=\"feature-access-upgrade-plan\" class=\"btn btn-large
+      btn-primary\" href=\"/subscriptions\">Upgrade now</a></div></div><script type=\"html/template\"
+      data-template-id=\"dialog-body\"><div class=\"dialog-body\"><div class=\"row-fluid\"><div
+      class=\"span3\"><img class=\"icon\" src=\"{{icon}}\" /></div><div class=\"span9\"><p
+      class=\"message\">{{{message}}}</p></div></div></div></script><script type=\"html/template\"
+      data-template-id=\"dialog-button-normal\"><a data-behavior=\"dialog-action\"
+      class=\"btn btn-primary\" href=\"#\" data-action-id=\"{{id}}\">{{label}}</a></script><script
+      type=\"html/template\" data-template-id=\"dialog-button-close\"><a class=\"btn
+      btn-secondary\" href=\"#\" data-dismiss=\"modal\">{{label}}</a></script><script
+      type=\"html/template\" data-template-id=\"truncatable\"><span data-behavior=\"truncatable-contents\"
+      class=\"truncatable-contents collapsed\">{{{contents}}}</span><a data-behavior=\"truncatable-trigger\"
+      class=\"truncatable-trigger\" href=\"#\"><span>More</span> <i class=\"icon-caret-down\"></i></a></script><script
+      type=\"html/template\" data-template-id=\"notifications-container\"><div data-behavior=\"notifications-container\"
+      class=\"notifications-container\"></div></script><script type=\"html/template\"
+      data-template-id=\"notifications-entry\"><div data-behavior=\"notification\"
+      class=\"notification {{type}}\"><div class=\"container\"><div class=\"message
+      {{#if title}}with-title{{/if}} {{#if message}}with-message{{/if}} {{type}}\">{{#if
+      title}}<span>{{{title}}}</span>{{/if}}{{#if message}}<p>{{{message}}}</p>{{/if}}<a
+      data-behavior=\"close\" class=\"close-button\" href=\"#\"><i class=\"icon-remove\"></i></a></div></div></div></script><script
+      type=\"html/template\" data-template-id=\"modal-email\"><form action=\"#\" method=\"POST\"
+      data-remote=\"true\"><input type=\"hidden\" name=\"authenticity_token\" value=\"6jR6/21cxYQPa9nxtBh3xJqYkgwbDw2rCN2hQEUGkJw=\"
+      /><div class=\"modal-header\"><a class=\"close\" href=\"#\" data-dismiss=\"modal\"><i
+      class=\"icon-remove\"></i></a><h3 data-behavior=\"email-title\">Send</h3></div><div
+      class=\"modal-body\"><div data-behavior=\"email-header\" class=\"header\"><p>Header</p><div
+      class=\"clear\"></div></div><div class=\"fields\"><div class=\"field\"><input
+      data-behavior=\"recipients\" id=\"to_user_email\" name=\"to_user[email]\" placeholder=\"Email\"
+      required=\"required\" size=\"30\" type=\"text\" /></div><div class=\"field\"><textarea
+      cols=\"40\" data-behavior=\"message\" id=\"to_user_message\" name=\"to_user[message]\"
+      placeholder=\"Message (Optional)\" rows=\"20\">\n</textarea></div></div><div
+      data-behavior=\"notifications\" class=\"notifications\"><ul></ul></div></div><div
+      class=\"modal-footer\"><button class=\"btn btn-primary\" data-behavior=\"button\"
+      name=\"button\" type=\"submit\">Send</button></div></form></script><script type=\"html/template\"
+      data-template-id=\"loader\"><img alt=\"{{label}}\" class=\"loader\" data-behavior=\"loader\"
+      src=\"/images/horizontal-scroll.gif\" /></script><script type=\"text/template\"
+      data-template-id=\"remote-action-loader\"><img alt=\"{{message}}\" class=\"loader\"
+      data-behavior=\"loader\" src=\"/images/horizontal-scroll.gif\" /></script><script
+      type=\"text/template\" data-template-id=\"embed-action-loader\"><div class=\"embed-action-loader\"><img
+      alt=\"{{message}}\" class=\"loader\" data-behavior=\"loader\" src=\"/images/horizontal-scroll.gif\"
+      /></div></script><script type=\"text/template\" data-template-id=\"analytics-loading\"><div
+      class=\"align-center status-message loading big\"><div class=\"spinner large\"><div
+      class=\"base\"></div><div class=\"dial\"></div><img alt=\"Spinner-analytics\"
+      class=\"spinner-icon\" src=\"/images/next/spinner-analytics.png\" /></div><h2>Heating
+      up now ...</h2></div></script><script type=\"text/template\" data-template-id=\"analytics-error\"><div
+      class=\"align-center status-message error big\"><span class=\"states-165-error\"></span><h2>We
+      couldn't load your Dashboard.</h2></div></script><script type=\"text/template\"
+      data-template-id=\"messages-action-loader\"><img alt=\"{{message}}\" class=\"loader\"
+      src=\"/images/horizontal-scroll.gif\" /></script><script type=\"html/template\"
+      data-template-id=\"messages-accounts-modal\"><div class=\"modal-header\"><div
+      class=\"row-fluid\"><div class=\"span10\"><i class=\"header-icon\"></i><h3>Accounts</h3></div></div></div><form
+      accept-charset=\"UTF-8\" action=\"/activities/remove_multiple/{{message_id}}\"
+      method=\"post\"><input type=\"hidden\" name=\"authenticity_token\" value=\"6jR6/21cxYQPa9nxtBh3xJqYkgwbDw2rCN2hQEUGkJw=\"
+      /><div class=\"modal-body\">{{#each accounts}}<div data-behavior=\"message-account\"
+      class=\"account\" data-account-id=\"{{id}}\"><div class=\"row-fluid\">{{#if
+      not_deleted}}{{#if is_foursquare}}<div class=\"span1\"><div class=\"span-container\"><a
+      data-behavior=\"platform-link\" class=\"account-avatar\" href=\"{{platform_link}}\"
+      target=\"_blank\" title=\"{{label}}\"><img src=\"{{image}}\" alt=\"{{label}}\"
+      title=\"{{label}}\" onerror=\"this.src=&#39;/images/next/default-avatars/source.png&#39;;\"
+      /><span class=\"platform {{type}}\"></span></a></div></div><div class=\"span4\"><div
+      class=\"span-container\"><a data-behavior=\"platform-link\" class=\"account_name\"
+      href=\"{{platform_link}}\" target=\"_blank\" title=\"{{label}}\">{{label}}</a></div></div>{{else}}<div
+      class=\"span1\"><div class=\"span-container\"><a data-behavior=\"platform-link\"
+      class=\"account-avatar\" href=\"{{link}}\" target=\"_blank\" title=\"{{label}}\"><img
+      src=\"{{image}}\" alt=\"{{label}}\" title=\"{{label}}\" onerror=\"this.src=&#39;/images/next/default-avatars/source.png&#39;;\"
+      /><span class=\"platform {{type}}\"></span></a></div></div><div class=\"span4\"><div
+      class=\"span-container\"><a data-behavior=\"platform-link\" class=\"account_name\"
+      href=\"{{link}}\" target=\"_blank\" title=\"{{label}}\">{{label}}</a></div></div>{{/if}}<div
+      class=\"span5\"><div class=\"span-container\"><span class=\"status {{status}}\"
+      rel=\"tooltip\" title=\"{{error}}\">{{error_summary}}</span></div></div>{{#if
+      is_successful_or_removable}}<div class=\"span1\"><div class=\"span-container\"><input
+      id=\"account_\" name=\"account[]\" type=\"checkbox\" value=\"{{id}}\" /></div></div>{{else}}<div
+      class=\"span1\"><div class=\"span-container\"><input disabled=\"disabled\" id=\"account_\"
+      name=\"account[]\" type=\"checkbox\" value=\"{{id}}\" /></div></div>{{/if}}<div
+      class=\"span1\"><div class=\"span-container\"><span class=\"icons-16-status-{{status}}\"></span></div></div>{{/if}}</div></div>{{/each}}</div><div
+      class=\"modal-footer\"><a class=\"btn\" href=\"#\" data-behavior=\"messages-accounts-list-modal-close\"
+      data-dismiss=\"modal\">Close</a>{{#if deletable}}<button class=\"btn btn-primary
+      delete-from-platform\" data-confirm=\"This message will be deleted from the
+      target platform, are you sure you want to proceed?\" name=\"button\" type=\"submit\">Delete
+      from platform</button>{{else}}<button class=\"btn btn-primary\" disabled=\"disabled\"
+      name=\"button\" type=\"submit\">Delete from platform</button>{{/if}}</div></form></script><script
+      type=\"html/template\" data-template-id=\"actions-assign-task-content\"><div
+      class=\"content\"><div class=\"row-fluid\"><div class=\"span1\"><a class=\"avatar
+      {{message_platform}}\" href=\"{{user_external_profile}}\" target=\"_blank\"><img
+      src=\"{{user_avatar}}\" onerror=\"this.src=&#39;/images/next/default-avatars/source.png&#39;;\"
+      /></a></div><div class=\"span11\"><div class=\"content-body\"><div class=\"row-fluid\"><div
+      class=\"span7\"><p class=\"user\">{{#if user_name}}<a class=\"user\" href=\"{{user_external_profile}}\"
+      target=\"_blank\"><strong>{{user_name}}</strong></a>{{else}}<span class=\"muted\">{{platform_name}}
+      mention for topic profile</span>{{/if}}{{#if is_twitter}}&nbsp;<a class=\"twitter\"
+      href=\"{{user_external_profile}}\" target=\"_blank\">@{{user_screen_name}}</a>{{/if}}</p></div><div
+      class=\"span5\"><div class=\"meta align-right\">{{#if message_link}}<a href=\"{{message_link}}\"
+      rel=\"tooltip\" title=\"{{{absolute_date}}}\" target=\"_blank\">{{{relative_date}}}</a>{{else}}<a
+      href=\"{{user_profile}}\" rel=\"tooltip\" title=\"{{{absolute_date}}}\" target=\"_blank\">{{{relative_date}}}</a>{{/if}}<span
+      class=\"platforms-16-{{message_platform}}\"></span></div></div></div><p class=\"message\">{{#if
+      is_rich}}  {{{message_content.message}}}{{else}}  {{{message_content}}}{{/if}}</p></div></div></div><div
+      class=\"row-fluid\"><div class=\"span1\">&nbsp;</div><div class=\"span11\"><span
+      class=\"reference\">{{#if label}}{{label}} via&nbsp;<a href=\"{{account.link}}\"
+      target=\"_blank\">{{platform_name}}</a>{{else}}  {{#if user_name}}    {{platform_name}}
+      mention for topic profile  {{/if}}{{/if}}{{#if sentiment}}<span class=\"sentiment
+      {{sentiment}}\"><span class=\"sentiment-14-{{sentiment}}\"></span>{{sentiment_label}}</span>{{/if}}{{#if
+      lead}}<span class=\"leads\"><span class=\"sentiment-14-leads\"></span>Lead</span>{{/if}}</span></div></div></div></script><script
+      type=\"html/template\" data-template-id=\"actions-create-twicket-form\"><form
+      accept-charset=\"UTF-8\" action=\"https://app.viralheat.com/tickets\" class=\"parameters
+      form-horizontal\" data-remote=\"true\" method=\"post\"><div style=\"margin:0;padding:0;display:inline\"><input
+      name=\"utf8\" type=\"hidden\" value=\"&#x2713;\" /><input name=\"authenticity_token\"
+      type=\"hidden\" value=\"6jR6/21cxYQPa9nxtBh3xJqYkgwbDw2rCN2hQEUGkJw=\" /></div><input
+      id=\"platform\" name=\"platform\" type=\"hidden\" value=\"zendesk\" /><input
+      id=\"post_body\" name=\"post_body\" type=\"hidden\" /><div class=\"control-group\"><div
+      class=\"control-label\"><label for=\"Twitter\">Twitter</label></div><div class=\"controls\"><input
+      id=\"twitter_handles\" name=\"twitter_handles\" type=\"hidden\" /></div></div><div
+      class=\"control-group\"><div class=\"pull-right\"><a data-behavior=\"action-execute\"
+      id=\"action-execute-button\" class=\"btn btn-primary\">Create ticket</a></div></div></form></script><script
+      type=\"html/template\" data-template-id=\"actions-create-case-form\"><div class=\"customer-info-box\"><div
+      class=\"row-fluid\"><p>Case Info</p></div><div class=\"row-fluid\"><div class=\"span4\"><label
+      class=\"radio\"><input checked=\"checked\" data-behavior=\"info-choice\" id=\"info_unavailable\"
+      name=\"info\" type=\"radio\" value=\"unavailable\" />Create a new customer</label></div><div
+      class=\"span8\"><label class=\"radio\"><input data-behavior=\"info-choice\"
+      id=\"info_available\" name=\"info\" type=\"radio\" value=\"available\" />Choose
+      an existing customer</label></div></div></div><form accept-charset=\"UTF-8\"
+      action=\"https://app.viralheat.com/tickets\" class=\"parameters form-horizontal\"
+      data-remote=\"true\" method=\"post\"><div style=\"margin:0;padding:0;display:inline\"><input
+      name=\"utf8\" type=\"hidden\" value=\"&#x2713;\" /><input name=\"authenticity_token\"
+      type=\"hidden\" value=\"6jR6/21cxYQPa9nxtBh3xJqYkgwbDw2rCN2hQEUGkJw=\" /></div><input
+      id=\"post_content\" name=\"post_content\" type=\"hidden\" /><input id=\"platform\"
+      name=\"platform\" type=\"hidden\" value=\"desk\" /><input id=\"post_body\" name=\"post_body\"
+      type=\"hidden\" /><div class=\"row-fluid\"><div class=\"recipient-info\"><div
+      class=\"span3 control-group\"><input id=\"recipient_fname\" name=\"recipient_fname\"
+      placeholder=\"First Name\" type=\"text\" /></div><div class=\"span3 control-group\"><input
+      id=\"recipient_lname\" name=\"recipient_lname\" placeholder=\"Last Name\" type=\"text\"
+      /></div><div class=\"span6 control-group\"><input id=\"recipient_email\" name=\"recipient_email\"
+      placeholder=\"Customer Email\" type=\"text\" /></div></div></div><div class=\"row-fluid
+      existing-customers\"><div class=\"span6 control-group\"><input id=\"existing_customer\"
+      name=\"existing_customer\" type=\"hidden\" /></div></div><div class=\"control-group\"><textarea
+      id=\"subject\" name=\"subject\" placeholder=\"Subject of the case\">\n</textarea></div><div
+      class=\"control-group\"><input data-behavior=\"case-labels\" id=\"labels\" name=\"labels\"
+      placeholder=\"Labels\" type=\"text\" /></div><div class=\"row-fluid\"><div class=\"span6
+      control-group\"><select id=\"priority\" name=\"priority\" required=\"required\"><option
+      value=\"\">Select a Priority ( 1 being the lowest )</option><option value=\"1\">1</option>\n<option
+      value=\"2\">2</option>\n<option value=\"3\">3</option>\n<option value=\"4\">4</option>\n<option
+      value=\"5\">5</option>\n<option value=\"6\">6</option>\n<option value=\"7\">7</option>\n<option
+      value=\"8\">8</option>\n<option value=\"9\">9</option>\n<option value=\"10\">10</option></select></div><div
+      class=\"span6 control-group\"><input id=\"group\" name=\"group\" type=\"hidden\"
+      /></div></div><div class=\"control-group\"><div class=\"pull-right\"><a class=\"btn
+      btn-secondary create-ticket-close-btn\" href=\"#\" data-behavior=\"create-case-close-btn\"
+      data-dismiss=\"modal\">Cancel</a><a data-behavior=\"action-execute\" id=\"action-execute-button\"
+      class=\"btn btn-success disabled\">Create case</a></div></div></form></script><script
+      type=\"html/template\" data-template-id=\"actions-create-ticket-form\"><div
+      class=\"customer-info-box\"><div class=\"row-fluid\"><p>Ticket Info</p></div><div
+      class=\"row-fluid\"><div class=\"span4\"><label class=\"radio\"><input checked=\"checked\"
+      data-behavior=\"info-choice\" id=\"info_available\" name=\"info\" type=\"radio\"
+      value=\"available\" />I have customer info</label></div><div class=\"span8\"><label
+      class=\"radio\"><input data-behavior=\"info-choice\" id=\"info_unavailable\"
+      name=\"info\" type=\"radio\" value=\"unavailable\" />I do not have the customer
+      information</label></div></div></div><form accept-charset=\"UTF-8\" action=\"https://app.viralheat.com/tickets\"
+      class=\"parameters form-horizontal\" data-remote=\"true\" method=\"post\"><div
+      style=\"margin:0;padding:0;display:inline\"><input name=\"utf8\" type=\"hidden\"
+      value=\"&#x2713;\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"6jR6/21cxYQPa9nxtBh3xJqYkgwbDw2rCN2hQEUGkJw=\"
+      /></div><input id=\"post_content\" name=\"post_content\" type=\"hidden\" /><input
+      id=\"platform\" name=\"platform\" type=\"hidden\" value=\"zendesk\" /><input
+      id=\"post_body\" name=\"post_body\" type=\"hidden\" /><div class=\"row-fluid\"><div
+      class=\"recipient-info\"><div class=\"span6 control-group\"><input id=\"recipient_name\"
+      name=\"recipient_name\" placeholder=\"Customer Name\" type=\"text\" /></div><div
+      class=\"span6 control-group\"><input id=\"recipient_email\" name=\"recipient_email\"
+      placeholder=\"Customer Email\" type=\"text\" /></div></div></div><div class=\"control-group\"><textarea
+      id=\"description\" name=\"description\" placeholder=\"Description of the ticket\">\n</textarea></div><div
+      class=\"row-fluid\"><div class=\"span6 control-group\"><select id=\"priority\"
+      name=\"priority\"><option value=\"\">Priority</option><option value=\"urgent\">urgent</option>\n<option
+      value=\"high\">high</option>\n<option value=\"normal\">normal</option>\n<option
+      value=\"low\">low</option></select></div><div class=\"span6 control-group\"><select
+      id=\"type\" name=\"type\" required=\"required\"><option value=\"\">Type of ticket</option><option
+      value=\"problem\">problem</option>\n<option value=\"incident\">incident</option>\n<option
+      value=\"question\">question</option>\n<option value=\"task\">task</option></select></div></div><div
+      class=\"row-fluid\"><div class=\"span6 control-group\"><input id=\"group\" name=\"group\"
+      type=\"hidden\" /></div></div><div class=\"control-group\"><div class=\"pull-right\"><a
+      class=\"btn btn-secondary create-ticket-close-btn\" href=\"#\" data-behavior=\"create-ticket-close-btn\"
+      data-dismiss=\"modal\">Cancel</a><a data-behavior=\"action-execute\" id=\"action-execute-button\"
+      class=\"btn btn-success disabled\">Create ticket</a></div></div></form></script><script
+      type=\"html/template\" data-template-id=\"actions-salesforce-form\"><div class=\"content\"><div
+      class=\"row-fluid\"><p>Record the author of this post as a new lead in your
+      Salesforce database</p></div></div><form accept-charset=\"UTF-8\" action=\"https://app.viralheat.com/sales_leads?vendor=salesforce\"
+      class=\"parameters form-horizontal\" data-remote=\"true\" method=\"post\"><div
+      style=\"margin:0;padding:0;display:inline\"><input name=\"utf8\" type=\"hidden\"
+      value=\"&#x2713;\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"6jR6/21cxYQPa9nxtBh3xJqYkgwbDw2rCN2hQEUGkJw=\"
+      /></div><input id=\"post_content\" name=\"post_content\" type=\"hidden\" /><div
+      class=\"row-fluid\"><div class=\"lead-info\"><div class=\"span6 control-group\"><label
+      for=\"First_Name\">First name</label><input id=\"lead_first_name\" name=\"lead_first_name\"
+      type=\"text\" value=\"{{first_name}}\" /><label for=\"Email\">Email</label><input
+      id=\"lead_email\" name=\"lead_email\" type=\"text\" /></div><div class=\"span6
+      control-group\"><label for=\"Last_Name\">Last name</label><input id=\"lead_last_name\"
+      name=\"lead_last_name\" type=\"text\" value=\"{{last_name}}\" /><label for=\"Phone\">Phone</label><input
+      id=\"lead_phone\" name=\"lead_phone\" type=\"text\" /></div><div class=\"span6
+      control-group\"><label for=\"Company\">Company</label><input id=\"lead_company\"
+      name=\"lead_company\" type=\"text\" value=\"{{user_name}}\" /></div></div></div><div
+      class=\"control-group\"><div class=\"control-label\"><label for=\"Description\">Description</label></div><div
+      class=\"controls\"><textarea id=\"description\" name=\"description\">\n{{description}}</textarea></div></div><div
+      class=\"control-group\"><div class=\"pull-right\"><a data-behavior=\"action-execute\"
+      id=\"action-execute-button\" class=\"btn btn-primary disabled\"> Update Now</a></div></div></form></script><script
+      type=\"html/template\" data-template-id=\"actions-sugarcrm-form\"><div class=\"content\"><div
+      class=\"row-fluid\"><p>Record the author of this post as a new lead in your
+      SugarCRM database</p></div></div><form accept-charset=\"UTF-8\" action=\"https://app.viralheat.com/sales_leads?vendor=sugarcrm\"
+      class=\"parameters form-horizontal\" data-remote=\"true\" method=\"post\"><div
+      style=\"margin:0;padding:0;display:inline\"><input name=\"utf8\" type=\"hidden\"
+      value=\"&#x2713;\" /><input name=\"authenticity_token\" type=\"hidden\" value=\"6jR6/21cxYQPa9nxtBh3xJqYkgwbDw2rCN2hQEUGkJw=\"
+      /></div><input id=\"post_content\" name=\"post_content\" type=\"hidden\" /><div
+      class=\"row-fluid\"><div class=\"lead-info\"><div class=\"span6 control-group\"><label
+      for=\"First_Name\">First name</label><input id=\"lead_first_name\" name=\"lead_first_name\"
+      type=\"text\" value=\"{{first_name}}\" /><label for=\"Email\">Email</label><input
+      id=\"lead_email\" name=\"lead_email\" type=\"text\" /></div><div class=\"span6
+      control-group\"><label for=\"Last_Name\">Last name</label><input id=\"lead_last_name\"
+      name=\"lead_last_name\" type=\"text\" value=\"{{last_name}}\" /><label for=\"Phone\">Phone</label><input
+      id=\"lead_phone\" name=\"lead_phone\" type=\"text\" /></div><div class=\"span6
+      control-group\"><label for=\"Company\">Company</label><input id=\"lead_company\"
+      name=\"lead_company\" type=\"text\" value=\"{{user_name}}\" /></div></div></div><div
+      class=\"control-group\"><div class=\"control-label\"><label for=\"Description\">Description</label></div><div
+      class=\"controls\"><textarea id=\"description\" name=\"description\">\n{{description}}</textarea></div></div><div
+      class=\"control-group\"><div class=\"pull-right\"><a data-behavior=\"action-execute\"
+      id=\"action-execute-button\" class=\"btn btn-primary disabled\"> Update Now</a></div></div></form></script><script
+      type=\"html/template\" data-template-id=\"actions-assign-task-parameters\"><form
+      accept-charset=\"UTF-8\" action=\"/tasks\" class=\"parameters form-horizontal\"
+      data-remote=\"true\" id=\"new_task\" method=\"post\"><div style=\"margin:0;padding:0;display:inline\"><input
+      name=\"utf8\" type=\"hidden\" value=\"&#x2713;\" /><input name=\"authenticity_token\"
+      type=\"hidden\" value=\"6jR6/21cxYQPa9nxtBh3xJqYkgwbDw2rCN2hQEUGkJw=\" /></div><div
+      class=\"control-group\"><label for=\"task_Description\">Description</label><textarea
+      cols=\"40\" id=\"task_description\" name=\"task[description]\" placeholder=\"Describe
+      this task\" rows=\"3\">\n</textarea></div><div class=\"control-group\"><label
+      class=\"control-label\" for=\"task_Assign to\">Assign to</label><div class=\"controls\"><input
+      name=\"task[owners][]\" type=\"hidden\" value=\"\" /><select data-task-type=\"users\"
+      id=\"task_owners\" multiple=\"multiple\" name=\"task[owners][]\" placeholder=\"Choose
+      assignee\"><option value=\"\"></option>\n</select></div></div><div class=\"control-group\"><label
+      class=\"control-label tags\" for=\"task_Tags\">Tags</label><div class=\"controls\"><input
+      data-behavior=\"task-tags\" id=\"task_tags\" name=\"task[tags]\" type=\"hidden\"
+      value=\"\" /></div></div><div class=\"control-group\"><label class=\"control-label\"
+      for=\"task_Due on\">Due on</label><div class=\"controls\"><input data-behavior=\"datepicker\"
+      id=\"task_deadline\" name=\"task[deadline]\" placeholder=\"No due date\" size=\"30\"
+      type=\"text\" /></div></div><div class=\"control-group\"><label class=\"control-label\"
+      for=\"task_Priority\">Priority</label><div class=\"controls\"><select data-task-type=\"priority\"
+      id=\"task_priority\" name=\"task[priority]\"><option value=\"high\">High</option>\n<option
+      value=\"normal\">Normal</option>\n<option value=\"low\">Low</option></select></div></div><div
+      class=\"control-group\"><label class=\"control-label\" for=\"task_Notifications\">Notifications</label><input
+      data-behavior=\"task-body\" id=\"task_body\" name=\"task[body]\" type=\"hidden\"
+      value=\"\" /><div class=\"controls\"><label class=\"checkbox\"><input name=\"task[send_notification]\"
+      type=\"hidden\" value=\"0\" /><input checked=\"checked\" id=\"task_send_notification\"
+      name=\"task[send_notification]\" type=\"checkbox\" value=\"1\" />Send me a email
+      notification when this task is completed</label></div></div><div class=\"control-group\"><div
+      class=\"pull-right\"><a data-behavior=\"action-execute\" id=\"action-execute-button\"
+      class=\"btn btn-primary disabled\">Assign task</a></div></div></form></script><script
+      type=\"text/template\" data-template-id=\"tracking-params-box\">{{#if googleanalytics_service}}<div
+      class=\"param-box\"><input id=\"service\" name=\"service\" type=\"hidden\" value=\"google_analytics\"
+      /><div class=\"row-fluid\"><div class=\"span5\"><input disabled=\"disabled\"
+      id=\"utm_source_key\" name=\"utm_source_key\" type=\"text\" value=\"utm_source\"
+      /></div><div class=\"span5\"><input id=\"utm_source_val\" name=\"utm_source_val\"
+      type=\"text\" value=\"%%channel%%\" /></div></div><div class=\"row-fluid\"><div
+      class=\"span5\"><input disabled=\"disabled\" id=\"utm_medium_key\" name=\"utm_medium_key\"
+      type=\"text\" value=\"utm_medium\" /></div><div class=\"span5\"><input id=\"utm_medium_val\"
+      name=\"utm_medium_val\" type=\"text\" value=\"Social\" /></div></div><div class=\"row-fluid\"><div
+      class=\"span5\"><input disabled=\"disabled\" id=\"utm_campaign_key\" name=\"utm_campaign_key\"
+      type=\"text\" value=\"utm_campaign\" /></div><div class=\"span5\"><input id=\"utm_campaign_val\"
+      name=\"utm_campaign_val\" type=\"text\" value=\"Viralheat\" /></div></div></div>{{else}}{{#if
+      add_trigger}}<input id=\"service\" name=\"service\" type=\"hidden\" value=\"custom\"
+      /><div class=\"row-fluid trigger-add\"><span class=\"bullet\"><span class=\"trigger-add\">+</span></span></div>{{/if}}<div
+      class=\"param-box\"><div class=\"row-fluid\"><div class=\"span5\"><input id=\"key_box_\"
+      name=\"key_box[]\" placeholder=\" Tracking Key\" type=\"text\" /></div><div
+      class=\"span5\"><input id=\"val_box_\" name=\"val_box[]\" placeholder=\"Value\"
+      type=\"text\" /></div><div class=\"pull-right\"><span class=\"bullet\"><span
+      class=\"trigger-remove\">-</span></span></div></div></div>{{/if}}</script><script
+      type=\"text/template\" data-template-id=\"filter-popover\"><ul class=\"sources\">{{#each
+      sources}}<li><span class=\"avatar\"><img src=\"{{avatar}}\" onerror=\"this.src=&#39;/images/next/default-avatars/source.png&#39;;\"
+      /><span class=\"platform\"><i class=\"{{avatar_icon_class}}\"></i></span></span><span>{{name}}</span></li>{{/each}}</ul></script><script
+      type=\"text/template\" data-template-id=\"filter-popover-template\"><div class=\"popover
+      filter sources\"><div class=\"arrow\"></div><div class=\"popover-inner\"><h3
+      class=\"popover-title\"></h3><div class=\"popover-content\"><p></p></div></div></div></script><script
+      type=\"text/template\" data-template-id=\"notification-popover-template\"><div
+      data-behavior=\"notifications-popover\" class=\"notifications popover\"><div
+      class=\"arrow\"></div><div class=\"popover-inner\"><h3 class=\"popover-title\"></h3><div
+      class=\"popover-content\"><div></div></div><div class=\"popover-footer text-center\"><a
+      href=\"https://app.viralheat.com/notifications\">See All</a></div></div></div></script><script
+      type=\"text/template\" data-template-id=\"task-comment\"><div class=\"comment\"><div
+      class=\"row-fluid\"><div class=\"span1 avatar\"><img src=\"{{avatar}}\" onerror=\"this.src=&#39;/images/next/default-avatars/source.png&#39;;\"
+      /></div><div class=\"span11\"><div class=\"user\"><h4>{{author}}</h4><h6>{{date}}</h6></div><p
+      class=\"comment-body\">{{{body}}}</p></div></div></div></script><script type=\"text/template\"
+      data-template-id=\"tools-error\"><div class=\"align-center status-message error\"><h2><span
+      class=\"states-45-error\"></span>{{message}}</h2></div></script><script type=\"text/template\"
+      data-template-id=\"tools-loading\"><div class=\"align-center status-message
+      loading\"><div class=\"spinner small\"><div class=\"base\"></div><div class=\"dial\"></div></div><h2>Heating
+      up now ...</h2></div></script><script type=\"text/template\" data-template-id=\"account-group\"><div
+      data-behavior=\"group\" class=\"group\" data-group-index=\"{{index}}\"><input
+      type=\"radio\" name=\"default\" value=\"{{index}}\" /><div class=\"group-header\"><div
+      class=\"row-fluid\"><div class=\"span8\"><input data-behavior=\"group-name\"
+      name=\"groups[{{index}}][name]\" type=\"text\" placeholder=\"Please enter a
+      name for your accounts group ...\" /></div><div class=\"span4 align-right\"><a
+      data-behavior=\"set-default\" class=\"btn set-default\" href=\"#\">Set as Default</a><a
+      data-behavior=\"remove-group\" class=\"btn remove-group\" href=\"#\" data-group-index=\"{{index}}\">Delete</a></div></div></div><div
+      class=\"group-body\"><div class=\"controls\"><select data-behavior=\"group-accounts\"
+      data-task-type=\"users\" id=\"groups___index___accounts_\" multiple=\"multiple\"
+      name=\"groups[{{index}}][accounts][]\" placeholder=\"Select accounts\"><option
+      value=\"\"></option></select></div></div><div class=\"clear\"></div></div></script><script
+      type=\"text/template\" data-template-id=\"comments-paginator-loading\"><div
+      data-behavior=\"paginator-element\" class=\"align-center status-message loading\"
+      data-paginator-role=\"loader\"><div class=\"spinner small\"><div class=\"base\"></div><div
+      class=\"dial\"></div></div><h2>Loading comments...</h2></div></script><script
+      type=\"text/template\" data-template-id=\"comments-paginator-empty\"><div data-behavior=\"paginator-element\"
+      class=\"align-center status-message\" data-paginator-role=\"empty\"><h2><span
+      class=\"states-45-messages-end\"></span>No comments found.</h2></div></script><script
+      type=\"text/template\" data-template-id=\"comments-paginator-end\"><div data-behavior=\"paginator-element\"
+      class=\"align-center status-message\" data-paginator-role=\"end\"><h2><span
+      class=\"states-45-stream-end\"></span>There are no more comments to show.</h2></div></script><script
+      type=\"text/template\" data-template-id=\"comments-paginator-error\"><div data-behavior=\"paginator-element\"
+      class=\"align-center status-message error\" data-paginator-role=\"error\"><h2><span
+      class=\"states-45-error\"></span>We ran into a problem while loading comments,<a
+      href=\"#\" data-behavior=\"paginator-load-previous\">please try again.</a></h2></div></script><script
+      type=\"text/template\" data-template-id=\"comments-paginator-previous\"><div
+      data-behavior=\"paginator-element\" class=\"align-center status-message\" data-paginator-role=\"previous\"><h2><span
+      class=\"states-45-analytics\"></span><a href=\"#\" data-behavior=\"paginator-load-previous\">Load
+      more comments.</a></h2></div></script><script type=\"text/template\" data-template-id=\"comments-stream\"><div
+      data-behavior=\"comments-root\"><div class=\"row-fluid\"><div class=\"span1\">&nbsp;</div><div
+      class=\"span11\"><div class=\"comments-embed\"><div data-behavior=\"paginator-root\"
+      class=\"comments-root\" data-paginator-id=\"comments\"><div data-behavior=\"paginator-container\"></div></div><div
+      data-behavior=\"comment-reply-form\" class=\"comment-reply\"><div class=\"row-fluid\"><div
+      class=\"span1 align-right\"><img data-behavior=\"comment-reply-form-author-avatar\"
+      class=\"comment-reply-form-author-avatar\" /></div><div class=\"span11\"><div
+      class=\"comment-area\"><textarea data-behavior=\"comment-reply-form-message\"></textarea><div
+      class=\"comment-options\"><div class=\"row-fluid\"><div class=\"span6\"><a data-behavior=\"comment-reply-form-shortener\"
+      class=\"comment-reply-form-shortener\" href=\"#\"><i class=\"icon-link\"></i></a>&nbsp;</div><div
+      class=\"span6 align-right\"><span data-behavior=\"comment-reply-form-counter\"
+      class=\"comment-reply-count\">123</span></div></div></div></div><div data-behavior=\"notifications\"
+      class=\"notifications\"><ul></ul></div><div class=\"row-fluid\"><div class=\"span9
+      comment-reply-summary\">You are replying as&nbsp;<span class=\"dropdown\"><a
+      data-behavior=\"comment-reply-form-author\" class=\"comment-reply-form-author\"
+      href=\"#\" data-toggle=\"dropdown\"><img src=\"\" /><span></span><b class=\"caret\"></b></a><ul
+      data-behavior=\"comment-reply-form-authors\" class=\"comment-reply-form-authors
+      dropdown-menu\">{{#each authors}}<li data-behavior=\"comment-author-choice\"
+      data-author-id=\"{{id}}\"><details data-tag=\"author\">{{{json}}}</details><a
+      href=\"#\"><img src=\"{{image}}\" onerror=\"this.src=&#39;/images/next/default-avatars/source.png&#39;;\"
+      /><span>{{label}}</span></a></li>{{/each}}</ul></span></div><div class=\"span3
+      align-right\"><a data-behavior=\"comment-reply-form-submit\" class=\"btn btn-primary\">Post</a></div></div></div></div></div></div></div></div></div></script></div><script
+      type=\"text/placeholder\" data-behavior=\"dynamic-yielder\" data-placeholder-name=\"javascripts\"></script><script
+      type=\"text/placeholder\" data-behavior=\"dynamic-yielder\" data-placeholder-name=\"views\"></script><script
+      type=\"text/javascript\">if (!NREUMQ.f) { NREUMQ.f=function() {\nNREUMQ.push([\"load\",new
+      Date().getTime()]);\nvar e=document.createElement(\"script\");\ne.type=\"text/javascript\";\ne.src=((\"http:\"===document.location.protocol)?\"http:\":\"https:\")
+      + \"//\" +\n  \"js-agent.newrelic.com/nr-100.js\";\ndocument.body.appendChild(e);\nif(NREUMQ.a)NREUMQ.a();\n};\nNREUMQ.a=window.onload;window.onload=NREUMQ.f;\n};\nNREUMQ.push([\"nrfj\",\"beacon-3.newrelic.com\",\"002b6b656b\",\"641603\",\"e1pZFkpbCg4ARk0VRFlBXgEXVhQNEkcHFEM=\",0,677,new
+      Date().getTime(),\"\",\"\",\"\",\"\",\"\"]);</script></body></html>"
     http_version: '1.1'
