@@ -5,22 +5,6 @@ context 'when the API key is invalid' do
 
   let(:as) {SentimentAnalysis::Client.new(:api_key => 'AN-invalid-API-key')}
 
-
-#--------
-# quota
-#--------
-
-  example 'calling quota() raises as InvalidApiKeyError ' do
-    VCR.use_cassette "errors/quota with an invalid api key", :record => :new_episodes  do
-      pending "update the API service to return a 401 when the API is invalid" do
-        expect{
-          as.quota
-        }.to raise_error(SentimentAnalysis::InvalidApiKeyError)
-      end
-    end
-  end
-
-
 #--------
 # train
 #--------
@@ -35,7 +19,6 @@ context 'when the API key is invalid' do
     end
   end
 
-
 #--------
 # review
 #--------
@@ -49,5 +32,4 @@ context 'when the API key is invalid' do
       end
     end
   end
-
 end
