@@ -2,29 +2,35 @@
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :get
-    uri: http://viralheat.com:80/api/sentiment/train.json?api_key=AN-invalid-API-key&text=I%20don't%20like%20coffee'&mood=negative
-    body: !!null 
-    headers: !!null 
+    uri: https://app.viralheat.com:443/social/api/sentiment/train?api_key=AN-invalid-API-key&text=I%20don't%20like%20coffee'&mood=negative
+    body: 
+    headers: 
   response: !ruby/struct:VCR::Response
     status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
     headers:
       server:
-      - nginx/0.7.62
+      - nginx/1.4.4
       date:
-      - Tue, 13 Sep 2011 11:38:49 GMT
+      - Tue, 10 Jun 2014 21:55:05 GMT
       content-type:
       - application/json; charset=utf-8
-      transfer-encoding:
-      - chunked
-      etag:
-      - ! '"0f0479874bf6f4a7281099b15df27c27"'
+      content-length:
+      - '52'
+      strict-transport-security:
+      - max-age=31536000
       x-ua-compatible:
       - IE=Edge,chrome=1
+      etag:
+      - ! '"1380a726efe9424072b98f4987b3f269"'
       cache-control:
       - max-age=0, private, must-revalidate
+      x-request-id:
+      - 4bba390e4aa6f0dcde479763b1ec91b6
+      x-rack-cache:
+      - miss
       status:
       - '200'
-    body: ! '{"status":"ok"}'
+    body: ! '{"status":403,"error":"Oops! Something went wrong!"}'
     http_version: '1.1'
